@@ -1,15 +1,17 @@
 import { Download, Features, SectionWrapper } from "./components";
+import assets from './assets'
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        React website app  
-      </h1> 
-      <Download />
-      <Features />
-      <SectionWrapper />
-    </div>
+    <>
+      <SectionWrapper 
+        title= "Your own website of NFT Tokens"
+        description= "Buy, Store, collect NFTs, exchange and earn crypto. Join 25 million people using ProNef Marketplace"
+        showBtn
+        mockupImg={assets.homeHero}
+        banner="banner"
+      />
+    </>
   );
 }
 
