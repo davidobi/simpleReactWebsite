@@ -3,12 +3,34 @@ import styles from '../styles/Global';
 import assets from '../assets';
 import Button from './Button';
 
-const SectionWrapper = ({title, description, showBtn, mockupImg, banner}) => {
+const SectionWrapper = ({title, description, showBtn, mockupImg, banner, reverse}) => {
   return (
-    <div className={`min-h-screen ${styles.section} ${styles.bgWhite} ${banner}`}>
-        <div className={`flex items-center ${styles.boxClass}`}>
-            <div className={`${styles.descDiv} fadeLeftmini`}>
-                <h1 className={`${styles.h1Text}`}>{title}</h1>
+    <div 
+        className={`min-h-screen ${styles.section} 
+                    ${banner}
+                    ${reverse ? styles.bgWhite : styles.bgPrimary}
+                    `}
+    >
+        <div 
+            className={`flex items-center 
+                        w-11/12 sm:w-full midmd:w-3/4
+                        ${reverse ? styles.boxReverseClass : styles.boxClass} 
+                    `}
+        >
+            <div 
+                className={`${styles.descDiv} 
+                            ${reverse ? 'fadeRightMini' : 'fadeLeftMini'}
+                            ${reverse ? styles.textRight : styles.textLeft}
+                            ${reverse ? styles.blackText : styles.whiteText}
+                        `}
+            >
+                <h1 
+                    className={`${styles.h1Text}
+                                ${reverse ? styles.blackText : styles.whiteText}
+                            `}
+                >
+                    {title}
+                </h1>
                 <p className={`${styles.descriptionText}`}>{description}</p>
                 {showBtn && (
                     <Button
@@ -17,10 +39,15 @@ const SectionWrapper = ({title, description, showBtn, mockupImg, banner}) => {
                     />
                 )}
             </div>
-        </div>
-        
-        
-        {/* <img src={mockupImg} alt="mockup" /> */}
+
+            <div className={`flex-1 ${styles.flexCenter} p-8 sm:px-0`}>
+                <img src={mockupImg} alt="mockup" 
+                    className={`${styles.sectionImg} 
+                                ${reverse ? 'fadeLeftMini' : 'fadeRightMini'}
+                            `} 
+                />
+            </div>
+        </div>        
     </div>
   )
 }
