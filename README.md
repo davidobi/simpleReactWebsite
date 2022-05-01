@@ -12,6 +12,9 @@
 
 [Live Demo Link](https://lingering-unit-2133.on.fleek.co/)
 
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/22225878/166166218-e9292aa0-3fda-4444-9d68-167eab4d93a6.gif)
+
+
 ## Getting Started
 
 **This is a simple project landing page built using react to showcase the react native application.**
