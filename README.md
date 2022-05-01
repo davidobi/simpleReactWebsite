@@ -1,4 +1,4 @@
-# Project Name ✏️
+# React Landing Page Website ✏️
 
 > Simple React web application showcasing the React native application built.
 
